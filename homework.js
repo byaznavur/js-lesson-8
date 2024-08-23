@@ -1,6 +1,6 @@
 // DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
-// Quyidagi massivdagi barcha odamlarni yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
+//!object1 Quyidagi massivdagi barcha odamlarni yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
 
 // Input: const people = [
 //   { name: "Abdulaziz", age: 33 },
@@ -9,8 +9,23 @@
 //   { name: "Sardor", age: 20 },
 // ];
 // Output: 27.25
+// const obj = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+//   { name: "Sardor", age: 20 },
+// ];
+// let count = 0;
+// let sum = 0;
+// for (let key in obj) {
+//   sum += obj[key].age;
+//   count++;
+// }
+// let res = sum / count;
+// console.log(res);
 
-// Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin. Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, aks holda true qiymat o’zlashtirilsin.
+//!object2 Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin. Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, aks holda true qiymat o’zlashtirilsin.
 
 // 	Output: [
 //   { name: "Abdulaziz", age: 33, isMarried: true},
@@ -19,22 +34,89 @@
 //   { name: "Sardor", age: 20, isMarried: false },
 // ];
 
-// Quyidagi objectlardan tuzilgan massiv ichidagi yoshi eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi getNameMaxMinAge(arr) nomli funksiya yozing. (for)
+// const obj = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+
+// for (let key in obj) {
+//   console.log((obj[key].isMaried = obj[key].age >= 25 ? true : false));
+// }
+
+// console.log(obj);
+
+//!object3 Quyidagi objectlardan tuzilgan massiv ichidagi yoshi eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi getNameMaxMinAge(arr) nomli funksiya yozing. (for)
 
 // 	Output: ["Temur", "Sardor"]
+// const obj = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
 
-// Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
+// let min = obj[0];
+// let max = obj[0];
+// function getNameMaxMinAge(obj) {
+//   for (let el of obj) {
+//     if (el.age < min.age) {
+//       min = el;
+//     }
+//     if (el.age > max.age) {
+//       max = el;
+//     }
+//   }
+
+//   return [min.name, max.name];
+// }
+
+// console.log(getNameMaxMinAge(obj));
+//!object4 Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
 
 // Input: {1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20}
 // Output: {20: [1, 3, 8], 30: [2, 5], 40: [4, 7]: 50: [6]}
+// let obj = { 1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20 };
 
-// Ikkita object berilgan ularning ba'zi kalitlari bir xil. Bir xil kalitlaridan iborat bo'lmagan yangi object hosil qiling.
+// let res = {};
+
+// for (let key in obj) {
+//   // console.log(key, obj[key]);
+//   let el = obj[key];
+//   if (el in res) {
+//     res[el].push(key);
+//   } else {
+//     res[el] = [key];
+//   }
+// }
+
+// console.log(res);
+
+//!object5 Ikkita object berilgan ularning ba'zi kalitlari bir xil. Bir xil kalitlaridan iborat bo'lmagan yangi object hosil qiling.
 
 // Input: obj1 = { a: 3, b: 10, c: 5, d: 7 };
 // obj2 = { a: 10, d: 4, e: 6, f: 15 };
 // Output: obj = {b: 10, c: 5, e: 6, f: 15};
+// let obj1 = { a: 3, b: 10, c: 5, d: 7 };
+// let obj2 = { a: 10, d: 4, e: 6, f: 15 };
 
-// UYGA VAZIFA
+// let res = {};
+
+// for (let key in obj1) {
+//   if (!(key in obj2)) {
+//     res[key] = obj1[key];
+//   }
+// }
+
+// for (let key in obj2) {
+//   if (!(key in obj1)) {
+//     res[key] = obj2[key];
+//   }
+// }
+// console.log(res);
+
+//? UYGA VAZIFA
 
 // Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
 

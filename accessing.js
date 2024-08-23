@@ -22,23 +22,23 @@ let person = {
   null: "NULL",
 };
 
-// console.log(person.firstName);
-// console.log(person["firstName"]);
+console.log(person.firstName);
+console.log(person["firstName"]);
 
-// console.log(person.firstName);
-// console.log(person.FirstName);
+console.log(person.firstName);
+console.log(person.FirstName);
 
-// console.log(person.languages);
-// console.log(person.languages[2]);
+console.log(person.languages);
+console.log(person.languages[2]);
 
 // console.log(person.2019);
-// console.log(person[2019]);
-// console.log(person["2019"]);
+console.log(person[2019]);
+console.log(person["2019"]);
 
-// console.log(person.fullName());
-// console.log(person["fullName"]());
+console.log(person.fullName());
+console.log(person["fullName"]());
 
-// console.log(person.university);
-// console.log(person.university.course);
+console.log(person.university);
+console.log(person.university.course);
 
-// console.log(person.null);
+console.log(person.null);

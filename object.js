@@ -1,15 +1,15 @@
-// let obj = {
-//   firstName: "John",
-//   lastName: "Doe",
-// };
+let obj = {
+  firstName: "John",
+  lastName: "Doe",
+};
 
-// let keys = Object.keys(obj);
+let keys = Object.keys(obj);
 
-// console.log(keys);
+console.log(keys);
 
-// let values = Object.values(obj);
+let values = Object.values(obj);
 
-// console.log(values);
+console.log(values);
 
 // let entries = Object.entries(obj);
 
@@ -24,10 +24,10 @@
 
 // console.log(obj);
 
-const obj = {
-  firstName: "John",
-  lastName: "Doe",
-};
+// const obj = {
+//   firstName: "John",
+//   lastName: "Doe",
+// };
 
 // obj = 0;
 

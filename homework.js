@@ -118,7 +118,7 @@
 
 //? UYGA VAZIFA
 
-// Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
+// !1 Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
 
 // Input:
 // const me = {
@@ -134,18 +134,61 @@
 // age: 23
 // languages: js,python,c++,nodejs
 // friends: Jamshid+Abbos+Jalol+Mar'uf
+// const me = {
+//   firstName: "Abdulaziz",
+//   lastName: "Toshpulatov",
+//   age: 23,
+//   languages: ["js", "python", "c++", "nodejs"],
+//   friends: ["Jamshid", "Abbos", "Jalol", "Mar'uf"],
+// };
+
+// for (let key in me) {
+//   if (key === "friends") {
+//     console.log(`${key}: ${me[key].join("+")}`);
+//   } else {
+//     console.log(`${key}: ${me[key]}`);
+//   }
+// }
 
 // Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
 
 // Input: 5
 // Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
+// let num = 5;
+// let obj = {};
+// for (let i = 0; i <= num; i++) {
+//   obj[i] = i * i;
+// }
+
+// console.log(obj);
+
 // 2-misoldan hosil bo’lgan objectning kalitlari va qiymatlari yig’indisini toping. (Object.keys(), Object.values())
+// let obj = { 0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25 };
+// let sumKey = 0;
+// let sumValue = 0;
+
+// for (let key in obj) {
+//   sumKey += +key;
+//   sumValue += obj[key];
+// }
+
+// console.log(sumValue);
+// console.log(sumKey);
 
 // Stringlar massivi berilgan. Shunday object hosil qilingki, o’sha objectning kalitlari massiv elementlaridan va qiymatlari esa ularning uzunligidan iborat bo’lsin. (for)
 
 // Input: ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"]
 // Output: {"Abdulaziz": 9, "Safarmurod": 10, "O’rol": 5, "Jahongir": 8}
+
+let arr = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
+let obj = {};
+
+for (let i = 0; i < arr.length; i++) {
+  obj[arr[i]] = arr[i].length;
+}
+
+console.log(obj);
 
 // Shunday object berilganki, uning kalitlari mahsulotlardan va qiymatlari esa ularning narxlaridan tuzilgan. Barcha mahsulot qancha turishini toping. (Object.values())
 
